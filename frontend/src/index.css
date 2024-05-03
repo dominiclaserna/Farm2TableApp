@@ -1,0 +1,294 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+/* CSS */
+
+/* color scheme variables */
+:root {
+  --darkgreen: #CCD5AE;
+  --lightgreen: #E9EDC9;
+  --lightbrown: #FEFAE0;
+  --mediumbrown: #c5b17b;
+  --darkbrown: #c4782c;
+}
+
+* {
+  margin: 0 ;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* remove default styling on link elements */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Set the min width of the website */
+body {
+  min-width: 600px;
+}
+
+/* Stop the text or typing cursor from appearing */
+/* when the following elements are clicked */
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img,
+div {
+  user-select: none;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* All Nav Bar */
+.navbar {
+  background-color: var(--darkgreen);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  padding: 10px;
+  /* Making the nav stay at the top of the viewport */
+  position: sticky;
+  top: 0;
+  /* make sure that the nav bar is always the top layer */
+  z-index: 100; 
+}
+
+.logo,
+.website-name,
+.page-icon {
+  margin-left: 10px;
+}
+
+.logo,
+.navbar-buttons {
+  max-width: 30px;
+  max-height: auto;
+}
+
+.page-icon {
+  max-height: 30px;
+  max-width: auto;
+}
+
+.website-name {
+  color: var(--darkbrown);
+}
+
+.website-name,
+.page-name {
+  /* font-weight: 900px; */
+  font-size: 25px;
+  font-family: monospace; 
+}
+
+#page-name {
+  color: black;
+  margin-left: 20px;
+}
+
+.title-logo-page,
+.navbar-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#shop-navbar {
+  justify-content: space-between;
+  flex: 1;
+}
+
+.navbar-buttons {
+  margin-right: 25px;
+}
+
+/* .navbar-buttons:hover {
+  border-bottom: 4px solid var(--darkbrown);
+} */
+
+#cart-button {
+  max-width: 35px;
+  max-height: auto;
+  flex: 1;
+}
+
+#delivery-button {
+  max-width: 40px;
+  max-height: auto;
+  flex: 1;
+  margin-bottom: 2px;
+}
+
+.navbar-buttons:hover,
+.add-to-cart-button:hover {
+  opacity: 50%;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Login Navbar */
+/* When CSS was added to the navbar using its classname, the CSS are being overwritten by some other CSS that I cannot find */
+/* So this time, we will use the ID selector to apply more specific CSS */
+#login-navbar {
+  background-color: var(--darkgreen);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  padding: 10px;
+  /* Making the nav stay at the top of the viewport */
+  position: sticky;
+  top: 0;
+  /* make sure that the nav bar is always the top layer */
+  z-index: 100; 
+}
+
+.logo, #logo,
+.website-name,
+#website-name {
+  margin-left: 10px;
+  margin-bottom: 0px;
+}
+
+#back-button {
+  max-height: 30px;
+  max-width: auto;
+  border-right: 3px solid black;
+  padding-right: 12px;
+  padding-left: 10px;
+  margin-right: 10px;
+}
+
+#back-button:hover {
+  opacity: 50%;
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Sidemenu */
+.sidemenu-and-main-panel-div {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidemenu-div {
+  /* make the width be 20% of the screen */
+  flex-basis: 20%;
+  background-color: var(--lightbrown);
+  height: calc(100vh - 57.05px);
+  /* make the position fixed */
+  position: sticky;
+  top: 61.05px;
+}
+
+/* This is the div to the right of the sidemenu where */
+/* the content of the page will be displayed */
+.main-panel {
+  /* set the size of the main panel to be equal to 80% of the screen */
+  flex-basis: 80%;
+}
+
+
+.sidemenu-header {
+  border-bottom: 3px solid var(--darkbrown);
+  text-align: center;
+  background-color: var(--lightgreen);
+  padding: 5px;
+  margin-bottom: 0px;
+}
+
+.option-icon {
+  max-width: 30px;
+  max-height: auto;
+}
+
+.option-div:hover {
+  opacity: 50%;
+}
+
+.option-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+}
+
+.option {
+  margin-left: 10px;
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+
+#side-menu-option-link {
+  text-decoration: none;
+  color: black;
+}
+
+.sidemenu-div a.active {
+  background: var(--lightgreen);
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Submenu Navbar */
+#submenu-navbar {
+  height: 57.05px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* Making the nav stay at the top of the viewport */
+  position: sticky;
+  top: 0;
+  /* make sure that the nav bar is always the top layer */
+  z-index: 100; 
+}
+
+#home-page-icon-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#home {
+  max-height: 30px;
+  max-width: auto;
+  border-right: 3px solid black;
+  padding-right: 12px;
+  padding-left: 10px;
+}
+
+#home:hover {
+  opacity: 50%;
+}
+
+#page-name {
+  font-size: 25px;
+  font-family: monospace;
+  margin-bottom: 0px;
+  margin-left: 20px;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Admin Dashboard Page*/
+
+

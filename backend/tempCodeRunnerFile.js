@@ -1,0 +1,1 @@
+let data = await Student.findOne({ fname: 'Tracy', lname: 'Greschik' });
